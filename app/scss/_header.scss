@@ -1,0 +1,136 @@
+.header {
+    
+    &__image {
+        background-image: url("../../images/desktop/image-header.jpg");
+        width: 100%;
+        height: 33.625rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        @include breakpoint-up(large) {
+            background-image: url("../../images/desktop/image-header.jpg");
+            width: 100%;
+            height: 50rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+
+    nav {
+        padding: 2rem;
+        margin-bottom: 1.75rem;
+    }
+
+
+    //Mobile menu
+    &__hamburger {
+        > span {
+            display: block;
+            width: 1.5625rem;
+            height: 0.125rem;
+            background-color: $white;
+            transition: all 300ms ease-in-out;
+            &:not(:last-child) {
+                margin-bottom: 0.1875rem;
+            }
+        }
+
+        &.open {
+            transition: all 300ms ease-in-out;
+            cursor: pointer;
+            > span {
+                transform-origin: 6px 1px;
+                transform: rotate(270deg); 
+                &:nth-child(1) {
+                    top: 18px;
+                    transform: rotate(135deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                    transform: rotate(180deg);
+                }
+                &:nth-child(3) {
+                    top: 18px;
+                    transform: rotate(-135deg);
+                }
+            }
+            
+        }
+    }
+
+    &__links {
+        
+        a {
+            color: $white;
+            margin-right: 3.125rem;
+            transition: opacity 300ms ease-in-out;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        .button {
+            color: $darkBlue;
+            border: none;
+            background-color: $white;
+            font-family: 'Fraunces', serif;
+            font-weight: 900;
+            font-size: 0.9375rem;
+            padding: 1.1rem 2rem;
+            border-radius: 3.125rem;
+            transition: all 300ms ease-in-out;
+            &:hover {
+                background-color: hsl(200, 96%, 73%);
+                color: $white;
+            }
+            
+        }
+        
+    }
+    &__mobile {
+        background: $white;
+        padding: 2.875rem 0px;
+        margin: 0px 1.5rem;
+        text-align: center;
+        transform: translate(0, 0);
+        transition: all 500ms ease;        
+        a {
+            display: block;
+            color: $darkBlue;
+            padding: 1.25rem;
+        }
+
+        .button {
+            margin: 1.25rem 0px;
+            color: $darkBlue;
+            border: none;
+            background-color: $yellow;
+            font-family: 'Fraunces', serif;
+            font-weight: 900;
+            font-size: 0.9375rem;
+            padding: 1.1rem 2rem;
+            border-radius: 3.125rem;        
+        }
+    }
+
+    &__intro {
+        text-align: center;
+        color: $white;
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        h1 { 
+            position: absolute;
+            top: 6.6875rem;
+            font-size: 2.75rem;
+            @include breakpoint-up(large) {
+                top: 9.6875rem;
+                font-size: 3.75rem;
+            }    
+        }
+        .hide {
+            opacity: 0;
+            transition: opacity 300ms ease-in-out;
+        }
+    }
+}

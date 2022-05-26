@@ -1,0 +1,94 @@
+.footer {
+    &__container {
+        background-color: hsl(167, 48%, 66%);
+        text-align: center;
+        flex-wrap: nowrap;
+        @include breakpoint-down(medium) {
+            height: 93.6vw;
+        }
+        @include breakpoint-up(large) {
+            height: 24vw;
+        }
+        &__logo {
+            flex-wrap: nowrap;
+            @include breakpoint-down(medium) {
+                padding-top: 17.3vw;
+                padding-bottom: 11.2vw;
+            }
+            @include breakpoint-up(large) {
+                padding-top: 4.8vw;
+                padding-bottom: 2.7vw;
+            }
+            img {
+                @include breakpoint-down(medium) {
+                    width: 49.8vw;
+                    height: 8.8vw;
+                }
+                @include breakpoint-up(large) {
+                    width: 11.6vw;
+                    height: 2.36vw;
+                }
+            }
+        }
+
+        &__bar {
+            flex-wrap: nowrap;
+            @include breakpoint-down(medium) {
+                padding-bottom: 24.2vw;
+            }
+            @include breakpoint-up(large) {
+                padding-bottom: 6.25vw;
+            }
+            a {
+                color: $darkModerateCyan;
+                transition: color 300ms ease-in-out;
+                &:hover {
+                    color: $white;
+                }
+                @include breakpoint-down(medium) {
+                    font-size: 5vw;
+                    &:nth-child(2) {
+                        padding-left: 15.4vw;
+                        padding-right: 15.4vw;
+                    }
+                }
+                @include breakpoint-up(large) {
+                    font-size: 1.1vw;
+                    &:nth-child(2) {
+                        padding-left: 4.2vw;
+                        padding-right: 4.2vw;
+                    }
+                }
+            }
+        }
+        &__icons {
+            flex-wrap: nowrap;
+            a {
+                svg path {
+                    transition: fill 300ms ease-in-out;
+                }
+                &:hover svg path {
+                    fill: $white;
+                }
+                @include breakpoint-down(medium) {
+                    &:not(:last-child) {
+                        padding-right: 1.875vw;
+                    }
+
+                    &:not(:first-child) {
+                        padding-left: 1.875vw;
+                    }
+                }
+                @include breakpoint-up(large) {
+                    &:not(:last-child) {
+                        padding-right: 1.875vw;
+                    }
+
+                    &:not(:first-child) {
+                        padding-left: 1.875vw;
+                    }
+                }
+            }
+        }
+    }
+}

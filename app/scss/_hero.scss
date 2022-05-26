@@ -1,0 +1,74 @@
+.hero {
+    @include breakpoint-down(medium) {
+        text-align: center;
+    }
+    @include breakpoint-up(large) {
+        text-align: start;
+        flex-wrap: nowrap;
+    }
+    &__image-egg {
+        @include breakpoint-down(medium) {
+            background-image: url('../../images/mobile/image-transform.jpg');
+        }
+        @include breakpoint-up(large) {
+            background-image: url('../../images/desktop/image-transform.jpg');
+        }
+    }
+    &__image-glass {
+        @include breakpoint-down(medium) {
+            background-image: url('../../images/mobile/image-stand-out.jpg')
+        }
+        @include breakpoint-up(large) {
+            background-image: url('../../images/desktop/image-stand-out.jpg');
+        }
+    }
+    &__description {
+        .hero__link-red {
+            > span {
+                background-color: $softRed;
+            }
+        }
+        .hero__link-yellow {
+            > span {
+                background-color: $yellow;           
+            }
+        }
+    }
+}
+
+.hero__bottom {
+    &__graphic {
+        @include breakpoint-down(medium) {
+            background-image: url('../../images/mobile/image-graphic-design.jpg')
+        }
+        @include breakpoint-up(large) {
+            background-image: url('../../images/desktop/image-graphic-design.jpg');
+        }
+
+        h3 {
+            color: $darkDesaturatedCyan;
+        }
+
+        p {
+            color: $darkDesaturatedCyan;
+        }
+    }
+
+    &__photography {
+        @include breakpoint-down(medium) {
+            background-image: url('../../images/mobile/image-photography.jpg')
+        }
+        @include breakpoint-up(large) {
+            background-image: url('../../images/desktop/image-photography.jpg');
+        }
+
+        h3 {
+            color: $veryDarkDesaturatedBlue;
+        }
+
+        p {
+            color: $veryDarkDesaturatedBlue
+        }
+    }
+}
+

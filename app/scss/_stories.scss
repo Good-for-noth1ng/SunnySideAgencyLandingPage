@@ -1,0 +1,79 @@
+.story {
+    &__header {
+        font-family:  'Fraunces', serif;
+        margin: 0px;
+        color: $grayishBlue;
+        @include breakpoint-down(medium) {
+            padding-top: 17.6vw;
+        }
+        @include breakpoint-up(large) {
+            padding-top: 11.5vw;
+            padding-bottom: 5.76vw;
+            font-size: 1.38vw;
+        }
+    }
+    &__container {
+        padding-left: 8%;
+        padding-right: 8%;
+        width: 100%;
+        height: 100%;
+        @include breakpoint-down(medium) {
+            text-align: center;
+        }
+        @include breakpoint-up(large) {
+            text-align: center;
+            flex-wrap: nowrap;
+        }
+        &__item {
+            margin-left: 1%;
+            margin-right: 1%;
+            img {
+                border-radius: 4.5rem;
+                @include breakpoint-down(medium) {
+                    width: 19.2vw;
+                    margin: 17.6vw 0px 10.4vw 0px;
+                }
+                @include breakpoint-up(large) {
+                    width: 5.2vw;
+                    margin: 0px 0px 4.4vw 0px;
+                }
+            }
+            .tale {
+                margin: 0px;
+                color: $veryDarkGrayishBlue;
+                @include breakpoint-down(medium) {
+                    padding-bottom: 11.4vw;
+                    font-size: 5vw;
+                }
+                @include breakpoint-up(large) {
+                    padding-bottom: 5.2vw;  
+                    font-size: 1.4vw;
+                }
+            }
+            h4 {
+                margin: 0px;
+                font-family:  'Fraunces', serif;
+                font-weight: 700;
+                color: $veryDarkDesaturatedBlue;
+                @include breakpoint-down(medium) {
+                    padding-bottom: 4vw;
+                    font-size: 4.8vw;
+                }
+                @include breakpoint-up(large) {
+                    padding-bottom: 1.25vw;
+                    font-size: 1.4vw;
+                }
+            }
+            .position {
+                margin: 0px;
+                color: $grayishBlue;
+                @include breakpoint-down(medium) {
+                    font-size: 4vw;
+                }
+                @include breakpoint-up(large) {
+                    font-size: 1.1vw;
+                }
+            }
+        }
+    }
+}
